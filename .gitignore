@@ -1,1 +1,5 @@
 .venv
+tests/login.robot
+tests/Keywords.robot
+tests/entry.robot
+browser_demo.robot

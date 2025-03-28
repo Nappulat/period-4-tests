@@ -1,0 +1,76 @@
+{"level":30,"time":"2025-03-28T06:33:35.510Z","pid":15392,"hostname":"Asus","msg":"Listening on 52585"}
+(node:15392) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-28T06:33:35.658Z","pid":15392,"hostname":"Asus","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-28T06:33:35.818Z","pid":15392,"hostname":"Asus","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-28T06:33:35.818Z","pid":15392,"hostname":"Asus","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-28T06:33:35.818Z","pid":15392,"hostname":"Asus","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-28T06:33:35.823Z","pid":15392,"hostname":"Asus","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-28T06:33:35.823Z","pid":15392,"hostname":"Asus","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-28T06:33:35.833Z","pid":15392,"hostname":"Asus","msg":"Changed active context"}
+{"level":30,"time":"2025-03-28T06:33:35.995Z","pid":15392,"hostname":"Asus","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-28T06:33:35.995Z","pid":15392,"hostname":"Asus","msg":"Changed active page"}
+{"level":30,"time":"2025-03-28T06:33:36.270Z","pid":15392,"hostname":"Asus","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-28T06:33:36.284Z","pid":15392,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-28T06:33:36.284Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with [name=\"my-text\"] in page."}
+{"level":30,"time":"2025-03-28T06:33:38.159Z","pid":15392,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-28T06:33:38.163Z","pid":15392,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-28T06:33:38.163Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with [name=\"my-password\"] in page."}
+{"level":30,"time":"2025-03-28T06:33:39.561Z","pid":15392,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-28T06:33:39.568Z","pid":15392,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-28T06:33:39.568Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with [name=\"my-textarea\"] in page."}
+{"level":30,"time":"2025-03-28T06:33:39.942Z","pid":15392,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-28T06:33:39.947Z","pid":15392,"hostname":"Asus","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-28T06:33:39.947Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with select.form-select in page."}
+{"level":30,"time":"2025-03-28T06:33:40.012Z","pid":15392,"hostname":"Asus","msg":"End of node method click"}
+{"level":30,"time":"2025-03-28T06:33:40.018Z","pid":15392,"hostname":"Asus","msg":"Start of node method getSelectContent"}
+{"level":30,"time":"2025-03-28T06:33:40.018Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with select.form-select in page."}
+{"level":30,"time":"2025-03-28T06:33:40.037Z","pid":15392,"hostname":"Asus","msg":"Option entries: 4"}
+{"level":30,"time":"2025-03-28T06:33:40.038Z","pid":15392,"hostname":"Asus","msg":"End of node method getSelectContent"}
+{"level":30,"time":"2025-03-28T06:33:40.037Z","pid":15392,"hostname":"Asus","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-03-28T06:33:40.041Z","pid":15392,"hostname":"Asus","msg":"Start of node method selectOption"}
+{"level":30,"time":"2025-03-28T06:33:40.042Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with select.form-select in page."}
+{"level":30,"time":"2025-03-28T06:33:40.069Z","pid":15392,"hostname":"Asus","msg":"Option entries: 4"}
+{"level":30,"time":"2025-03-28T06:33:40.070Z","pid":15392,"hostname":"Asus","msg":"End of node method selectOption"}
+{"level":30,"time":"2025-03-28T06:33:40.069Z","pid":15392,"hostname":"Asus","msg":"Selected entries: 1"}
+{"level":30,"time":"2025-03-28T06:33:40.074Z","pid":15392,"hostname":"Asus","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-28T06:33:40.075Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with xpath=//input[@list=\"my-options\"] in page."}
+{"level":30,"time":"2025-03-28T06:33:40.136Z","pid":15392,"hostname":"Asus","msg":"End of node method click"}
+{"level":30,"time":"2025-03-28T06:33:40.139Z","pid":15392,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-28T06:33:40.139Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with xpath=//input[@list=\"my-options\"] in page."}
+{"level":30,"time":"2025-03-28T06:33:41.076Z","pid":15392,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-28T06:33:41.084Z","pid":15392,"hostname":"Asus","msg":"Reading multiplepart uploadFileBySelector"}
+{"level":30,"time":"2025-03-28T06:33:41.084Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with //input[@type='file'] in page."}
+{"level":30,"time":"2025-03-28T06:33:41.085Z","pid":15392,"hostname":"Asus","msg":"Uploading file(s) C:\\Users\\Omistaja\\Documents\\hyte\\sovellustesti\\tests\\tester.txt to //input[@type='file']"}
+{"level":30,"time":"2025-03-28T06:33:41.107Z","pid":15392,"hostname":"Asus","msg":"Start of node method uncheckCheckbox"}
+{"level":30,"time":"2025-03-28T06:33:41.107Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with id=my-check-1 in page."}
+{"level":30,"time":"2025-03-28T06:33:41.139Z","pid":15392,"hostname":"Asus","msg":"End of node method uncheckCheckbox"}
+{"level":30,"time":"2025-03-28T06:33:41.143Z","pid":15392,"hostname":"Asus","msg":"Start of node method checkCheckbox"}
+{"level":30,"time":"2025-03-28T06:33:41.143Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with id=my-check-2 in page."}
+{"level":30,"time":"2025-03-28T06:33:41.187Z","pid":15392,"hostname":"Asus","msg":"End of node method checkCheckbox"}
+{"level":30,"time":"2025-03-28T06:33:41.192Z","pid":15392,"hostname":"Asus","msg":"Start of node method checkCheckbox"}
+{"level":30,"time":"2025-03-28T06:33:41.192Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with id=my-radio-2 in page."}
+{"level":30,"time":"2025-03-28T06:33:41.243Z","pid":15392,"hostname":"Asus","msg":"End of node method checkCheckbox"}
+{"level":30,"time":"2025-03-28T06:33:41.248Z","pid":15392,"hostname":"Asus","msg":"Start of node method getBoundingBox"}
+{"level":30,"time":"2025-03-28T06:33:41.249Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with [type=\"range\"] in page."}
+{"level":30,"time":"2025-03-28T06:33:41.256Z","pid":15392,"hostname":"Asus","msg":"End of node method getBoundingBox"}
+{"level":30,"time":"2025-03-28T06:33:41.260Z","pid":15392,"hostname":"Asus","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2025-03-28T06:33:41.260Z","pid":15392,"hostname":"Asus","msg":"Invoking mouse action move with params {\"x\":1020,\"y\":242,\"options\":{\"steps\":1}}"}
+{"level":30,"time":"2025-03-28T06:33:41.279Z","pid":15392,"hostname":"Asus","msg":"End of node method mouseMove"}
+{"level":30,"time":"2025-03-28T06:33:41.283Z","pid":15392,"hostname":"Asus","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2025-03-28T06:33:41.284Z","pid":15392,"hostname":"Asus","msg":"Invoking mouse action down with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2025-03-28T06:33:41.288Z","pid":15392,"hostname":"Asus","msg":"End of node method mouseButton"}
+{"level":30,"time":"2025-03-28T06:33:41.292Z","pid":15392,"hostname":"Asus","msg":"Start of node method mouseMove"}
+{"level":30,"time":"2025-03-28T06:33:41.292Z","pid":15392,"hostname":"Asus","msg":"Invoking mouse action move with params {\"x\":920,\"y\":242,\"options\":{\"steps\":300}}"}
+{"level":30,"time":"2025-03-28T06:33:46.311Z","pid":15392,"hostname":"Asus","msg":"End of node method mouseMove"}
+{"level":30,"time":"2025-03-28T06:33:46.314Z","pid":15392,"hostname":"Asus","msg":"Start of node method mouseButton"}
+{"level":30,"time":"2025-03-28T06:33:46.314Z","pid":15392,"hostname":"Asus","msg":"Invoking mouse action up with params {\"options\":{\"button\":\"left\",\"clickCount\":1}}"}
+{"level":30,"time":"2025-03-28T06:33:46.317Z","pid":15392,"hostname":"Asus","msg":"End of node method mouseButton"}
+{"level":30,"time":"2025-03-28T06:33:46.321Z","pid":15392,"hostname":"Asus","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-28T06:33:46.321Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with button in page."}
+{"level":30,"time":"2025-03-28T06:33:48.549Z","pid":15392,"hostname":"Asus","msg":"End of node method click"}
+{"level":30,"time":"2025-03-28T06:33:48.553Z","pid":15392,"hostname":"Asus","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-28T06:33:48.554Z","pid":15392,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with id=message in page."}
+{"level":30,"time":"2025-03-28T06:33:48.584Z","pid":15392,"hostname":"Asus","msg":"Retrieved text for element id=message containing Received!"}
+{"level":30,"time":"2025-03-28T06:33:48.584Z","pid":15392,"hostname":"Asus","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-28T06:33:51.119Z","pid":15392,"hostname":"Asus","msg":"Removed page=278a70eb-c367-43ae-808e-eabf7c9fe07e from context=068ba91d-5d6f-4bc1-9c25-933647170d65 page stack"}
