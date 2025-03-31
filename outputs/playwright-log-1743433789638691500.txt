@@ -1,0 +1,34 @@
+{"level":30,"time":"2025-03-31T15:09:50.196Z","pid":6932,"hostname":"Asus","msg":"Listening on 53588"}
+(node:6932) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-31T15:09:50.290Z","pid":6932,"hostname":"Asus","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-31T15:09:50.451Z","pid":6932,"hostname":"Asus","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-31T15:09:50.452Z","pid":6932,"hostname":"Asus","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-31T15:09:50.452Z","pid":6932,"hostname":"Asus","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-31T15:09:50.460Z","pid":6932,"hostname":"Asus","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-31T15:09:50.461Z","pid":6932,"hostname":"Asus","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-31T15:09:50.475Z","pid":6932,"hostname":"Asus","msg":"Changed active context"}
+{"level":30,"time":"2025-03-31T15:09:50.634Z","pid":6932,"hostname":"Asus","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-31T15:09:50.635Z","pid":6932,"hostname":"Asus","msg":"Changed active page"}
+{"level":30,"time":"2025-03-31T15:09:50.719Z","pid":6932,"hostname":"Asus","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-31T15:09:50.736Z","pid":6932,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:50.737Z","pid":6932,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with [name=\"username\"] in page."}
+{"level":30,"time":"2025-03-31T15:09:52.196Z","pid":6932,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:52.203Z","pid":6932,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:52.203Z","pid":6932,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with [name=\"password\"] in page."}
+{"level":30,"time":"2025-03-31T15:09:53.563Z","pid":6932,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:53.568Z","pid":6932,"hostname":"Asus","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-31T15:09:53.569Z","pid":6932,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with input.loginform in page."}
+{"level":30,"time":"2025-03-31T15:09:55.616Z","pid":6932,"hostname":"Asus","msg":"End of node method click"}
+================= Original suppressed error =================
+page.title: Execution context was destroyed, most likely because of a navigation
+    at getTitle (C:\Users\Omistaja\Documents\hyte\sovellustesti\.venv\Lib\site-packages\Browser\wrapper\index.js:11518:28)
+    at PlaywrightServer.getTitle (C:\Users\Omistaja\Documents\hyte\sovellustesti\.venv\Lib\site-packages\Browser\wrapper\index.js:13375:30)
+    at Object.onReceiveHalfClose (C:\Users\Omistaja\Documents\hyte\sovellustesti\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\Omistaja\Documents\hyte\sovellustesti\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\Omistaja\Documents\hyte\sovellustesti\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\Omistaja\Documents\hyte\sovellustesti\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18) {
+  name: 'Error'
+}
+=============================================================
+{"level":30,"time":"2025-03-31T15:10:02.554Z","pid":6932,"hostname":"Asus","msg":"Removed page=8a358bb8-820b-4f0c-94a4-fd7811abee1e from context=142dda5d-1979-4841-a151-8f78fdcf006f page stack"}

@@ -1,211 +1,252 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-03-28T08:33:34.868846" rpa="false" schemaversion="5">
-<suite id="s1" name="Assignment 3" source="C:\Users\Omistaja\Documents\hyte\sovellustesti\tests\assignment_3.robot">
-<test id="s1-t1" name="Test Web Form" line="6">
-<kw name="New Browser" owner="Browser">
-<msg time="2025-03-28T08:33:35.021960" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\Omistaja\\Documents\\hyte\\sovellustesti\\outputs\\browser\\traces\\temp\\8da9b962-acb4-4475-90c1-ccdbd045d133"}</msg>
-<msg time="2025-03-28T08:33:35.050487" level="INFO">Starting Browser process C:\Users\Omistaja\Documents\hyte\sovellustesti\.venv\Lib\site-packages\Browser\wrapper\index.js using port 52585</msg>
-<msg time="2025-03-28T08:33:35.050615" level="INFO">Node startup parameters: ['node', 'C:\\Users\\Omistaja\\Documents\\hyte\\sovellustesti\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js', '52585']</msg>
-<msg time="2025-03-28T08:33:35.823667" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\Omistaja\\Documents\\hyte\\sovellustesti\\outputs\\browser\\traces\\temp\\8da9b962-acb4-4475-90c1-ccdbd045d133"}</msg>
-<arg>chromium</arg>
-<arg>headless=No</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-03-28T08:33:35.021338" elapsed="0.802473"/>
+<robot generator="Robot 7.2.2 (Python 3.13.1 on win32)" generated="2025-03-31T18:11:16.586505" rpa="false" schemaversion="5">
+<suite id="s1" name="Assignment 9" source="C:\Users\Omistaja\Documents\hyte\sovellustesti\tests\assignment_9.robot">
+<kw name="Authenticate as Regular" type="SETUP">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-31T18:11:17.002883" level="INFO">${body} = {'username': 'projektidemo', 'password': 'salaSANA2025'}</msg>
+<var>${body}</var>
+<arg>username=${Username}</arg>
+<arg>password=${Password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.002600" elapsed="0.000317"/>
 </kw>
-<kw name="New Page" owner="Browser">
-<msg time="2025-03-28T08:33:36.276047" level="INFO">Successfully initialized new page object and opened url: https://www.selenium.dev/selenium/web/web-form.html</msg>
-<msg time="2025-03-28T08:33:36.276151" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<arg>https://www.selenium.dev/selenium/web/web-form.html</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="PASS" start="2025-03-28T08:33:35.824293" elapsed="0.452018"/>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2025-03-31T18:11:17.078292" level="INFO">POST Request : url=http://127.0.0.1:3000/api/auth/login 
+ path_url=/api/auth/login 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '56', 'Content-Type': 'application/json'} 
+ body=b'{"username": "projektidemo", "password": "salaSANA2025"}' 
+ </msg>
+<msg time="2025-03-31T18:11:17.078397" level="INFO">POST Response : url=http://127.0.0.1:3000/api/auth/login 
+ status=200, reason=OK 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '476', 'ETag': 'W/"1dc-UJLHruN+sK0JPSE3Lk2aMi35m5U"', 'Date': 'Mon, 31 Mar 2025 15:11:17 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={"message":"login succesful","user":{"user_id":5,"username":"projektidemo","email":"projekti@demo.fi","created_at":"2025-03-07T16:39:37.000Z","user_level":"regular"},"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VybmFtZSI6InByb2pla3RpZGVtbyIsImVtYWlsIjoicHJvamVrdGlAZGVtby5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDE2OjM5OjM3LjAwMFoiLCJ1c2VyX2xldmVsIjoicmVndWxhciIsImlhdCI6MTc0MzQzMzg3NywiZXhwIjoxNzQzNTIwMjc3fQ.HN6ps7Tx3D407BjpvVCemZ7LyoQ9iD_hxCcbsko22Gs"} 
+ </msg>
+<msg time="2025-03-31T18:11:17.078500" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>url=http://127.0.0.1:3000/api/auth/login</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.003038" elapsed="0.075483"/>
 </kw>
-<kw name="Get Title" owner="Browser">
-<msg time="2025-03-28T08:33:36.285779" level="INFO">Title: 'Web form'</msg>
-<arg>==</arg>
-<arg>Web form</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2025-03-28T08:33:36.276927" elapsed="0.008978"/>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${response.json()}[message]</arg>
+<arg>login succesful</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.078648" elapsed="0.000418"/>
 </kw>
-<kw name="Type Text" owner="Browser">
-<msg time="2025-03-28T08:33:36.286720" level="INFO">Types the text 'some@example.com' in the given field.</msg>
-<arg>[name="my-text"]</arg>
-<arg>${Username}</arg>
-<arg>delay=0.1 s</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-03-28T08:33:36.286173" elapsed="1.878617"/>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>user</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.079158" elapsed="0.000353"/>
 </kw>
-<kw name="Type Secret" owner="Browser">
-<arg>[name="my-password"]</arg>
-<arg>$Password</arg>
-<arg>delay=0.1 s</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given secret from ``variable_name`` into the text field
-found by ``selector``.</doc>
-<status status="PASS" start="2025-03-28T08:33:38.165375" elapsed="1.401839"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-31T18:11:17.080006" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VybmFtZSI6InByb2pla3RpZGVtbyIsImVtYWlsIjoicHJvamVrdGlAZGVtby5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDE2OjM5OjM3LjAwMFoiLCJ1c2VyX2xldmVsIjoicmV...</msg>
+<var>${token}</var>
+<arg>${response.json()}[token]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.079616" elapsed="0.000417"/>
 </kw>
-<kw name="Type Text" owner="Browser">
-<msg time="2025-03-28T08:33:39.569083" level="INFO">Types the text 'Hi!' in the given field.</msg>
-<arg>[name="my-textarea"]</arg>
-<arg>${Message}</arg>
-<arg>delay=0.1 s</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-03-28T08:33:39.567929" elapsed="0.379118"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-31T18:11:17.080407" level="INFO">${user_id} = 5</msg>
+<var>${user_id}</var>
+<arg>${response.json()}[user][user_id]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.080124" elapsed="0.000301"/>
 </kw>
-<kw name="Click With Options" owner="Browser">
-<msg time="2025-03-28T08:33:39.948474" level="INFO">Clicks the element 'select.form-select'.</msg>
-<arg>${dropdown-1}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-28T08:33:39.947696" elapsed="0.069782"/>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-03-31T18:11:17.080625" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VybmFtZSI6InByb2pla3RpZGVtbyIsImVtYWlsIjoicHJvamVrdGlAZGVtby5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDE2OjM5OjM3LjAwMFoiLCJ1c2VyX2xldmVsIjoicmV...</msg>
+<arg>${token}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.080505" elapsed="0.000145"/>
 </kw>
-<kw name="Get Select Options" owner="Browser">
-<msg time="2025-03-28T08:33:40.042826" level="INFO">entry {
-  value: "Open this select menu"
-  label: "Open this select menu"
-  selected: true
-}
-entry {
-  value: "1"
-  label: "One"
-  index: 1
-}
-entry {
-  value: "2"
-  label: "Two"
-  index: 2
-}
-entry {
-  value: "3"
-  label: "Three"
-  index: 3
-}
-</msg>
-<msg time="2025-03-28T08:33:40.043001" level="INFO">${all_options} = [{'index': 0, 'value': 'Open this select menu', 'label': 'Open this select menu', 'selected': True}, {'index': 1, 'value': '1', 'label': 'One', 'selected': False}, {'index': 2, 'value': '2', 'label': ...</msg>
-<var>${all_options}</var>
-<arg>${dropdown-1}</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns attributes of options of a ``select`` element as a list of dictionaries.</doc>
-<status status="PASS" start="2025-03-28T08:33:40.018234" elapsed="0.024792"/>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-03-31T18:11:17.080801" level="INFO">${user_id} = 5</msg>
+<arg>${user_id}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.080713" elapsed="0.000113"/>
 </kw>
-<kw name="Select Options By" owner="Browser">
-<msg time="2025-03-28T08:33:40.043923" level="INFO">Selects the option(s) 3 by attribute SelectAttribute.value from element select.form-select.</msg>
-<arg>${dropdown-1}</arg>
-<arg>value</arg>
-<arg>3</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Selects options from select element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-28T08:33:40.043405" elapsed="0.031809"/>
+<status status="PASS" start="2025-03-31T18:11:17.002222" elapsed="0.078649"/>
 </kw>
-<kw name="Click With Options" owner="Browser">
-<msg time="2025-03-28T08:33:40.076629" level="INFO">Clicks the element 'xpath=//input[@list="my-options"]'.</msg>
-<arg>${dropdown-2}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-28T08:33:40.075966" elapsed="0.064615"/>
+<test id="s1-t1" name="Get User's Measurements" line="27">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-31T18:11:17.081624" level="INFO">${header} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VybmFtZSI6InByb2pla3RpZGVtbyIsImVtYWlsIjoicHJvamVrdGlAZGVtby5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDE2OjM5OjM3LjAwM...</msg>
+<var>${header}</var>
+<arg>Authorization=Bearer ${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.081448" elapsed="0.000197"/>
 </kw>
-<kw name="Type Text" owner="Browser">
-<msg time="2025-03-28T08:33:40.141556" level="INFO">Types the text 'New York' in the given field.</msg>
-<arg>${dropdown-2}</arg>
-<arg>New York</arg>
-<arg>delay=0.1 s</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-03-28T08:33:40.140937" elapsed="0.940233"/>
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-03-31T18:11:17.090743" level="INFO">GET Request : url=http://127.0.0.1:3000/api/entries 
+ path_url=/api/entries 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VybmFtZSI6InByb2pla3RpZGVtbyIsImVtYWlsIjoicHJvamVrdGlAZGVtby5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDE2OjM5OjM3LjAwMFoiLCJ1c2VyX2xldmVsIjoicmVndWxhciIsImlhdCI6MTc0MzQzMzg3NywiZXhwIjoxNzQzNTIwMjc3fQ.HN6ps7Tx3D407BjpvVCemZ7LyoQ9iD_hxCcbsko22Gs'} 
+ body=None 
+ </msg>
+<msg time="2025-03-31T18:11:17.090822" level="INFO">GET Response : url=http://127.0.0.1:3000/api/entries 
+ status=200, reason=OK 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '6161', 'ETag': 'W/"1811-t0/v39bE26kvQHGvosCtbVHAYII"', 'Date': 'Mon, 31 Mar 2025 15:11:17 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body=[{"entry_id":11,"user_id":5,"readiness":87,"bpm":74,"rmssd":66,"sns":"0.28","pns":"0.54","sleep_hours":7,"phy_age":28,"mood":"Stressaantunut.","notes":"Skipattu urheilu eilen.","created_at":"2025-03-07T17:24:34.000Z"},{"entry_id":12,"user_id":5,"readiness":62,"bpm":85,"rmssd":78,"sns":"0.28","pns":"0.54","sleep_hours":9,"phy_age":21,"mood":"Stressaantunut.","notes":"Urheiltu tänään","created_at":"2025-03-07T17:25:28.000Z"},{"entry_id":27,"user_id":5,"readiness":75,"bpm":82,"rmssd":89,"sns":"-1.20","pns":"0.54","sleep_hours":6,"phy_age":45,"mood":"Relaxed","notes":"Paljon stressiä.","created_at":"2025-03-10T08:02:59.000Z"},{"entry_id":28,"user_id":5,"readiness":67,"bpm":70,"rmssd":76,"sns":"-0.90","pns":"0.23","sleep_hours":8,"phy_age":18,"mood":"Väsynyt","notes":"Paljon stressiä.","created_at":"2025-03-10T08:28:31.000Z"},{"entry_id":33,"user_id":5,"readiness":85,"bpm":67,"rmssd":89,"sns":"-0.90","pns":"0.23","sleep_hours":6,"phy_age":24,"mood":"Stressaantunut","notes":"Esitellään.","created_at":"2025-03-11T08:52:15.000Z"},{"entry_id":34,"user_id":5,"readiness":84,"bpm":65,"rmssd":45,"sns":"0.89","pns":"0.23","sleep_hours":8,"phy_age":27,"mood":"Relaxed","notes":"Spend too much time on homework.","created_at":"2025-03-26T18:17:24.000Z"},{"entry_id":35,"user_id":5,"readiness":84,"bpm":65,"rmssd":45,"sns":"0.89","pns":"0.23","sleep_hours":8,"phy_age":27,"mood":"Relaxed","notes":"Spend too much time on homework.","created_at":"2025-03-26T18:18:56.000Z"},{"entry_id":36,"user_id":5,"readiness":84,"bpm":65,"rmssd":45,"sns":"0.89","pns":"0.23","sleep_hours":8,"phy_age":27,"mood":"Relaxed","notes":"Spend too much time on homework.","created_at":"2025-03-26T18:26:37.000Z"},{"entry_id":37,"user_id":5,"readiness":84,"bpm":65,"rmssd":45,"sns":"0.89","pns":"0.23","sleep_hours":8,"phy_age":27,"mood":"Relaxed","notes":"Spend too much time on homework.","created_at":"2025-03-26T18:27:35.000Z"},{"entry_id":38,"user_id":5,"readiness":84,"bpm":65,"rmssd":45,"sns":"0.89","pns":"0.23","sleep_hours":8,"phy_age":27,"mood":"Relaxed","notes":"Spend too much time on homework.","created_at":"2025-03-26T18:30:32.000Z"},{"entry_id":39,"user_id":5,"readiness":84,"bpm":65,"rmssd":45,"sns":"0.89","pns":"0.23","sleep_hours":8,"phy_age":27,"mood":"Relaxed","notes":"Spend too much time on homework.","created_at":"2025-03-26T18:32:01.000Z"},{"entry_id":40,"user_id":5,"readiness":84,"bpm":65,"rmssd":45,"sns":"0.89","pns":"0.23","sleep_hours":8,"phy_age":27,"mood":"Relaxed","notes":"Spend too much time on homework.","created_at":"2025-03-26T18:33:16.000Z"},{"entry_id":41,"user_id":5,"readiness":84,"bpm":65,"rmssd":45,"sns":"0.89","pns":"0.23","sleep_hours":8,"phy_age":27,"mood":"Relaxed","notes":"Spend too much time on homework.","created_at":"2025-03-26T18:36:49.000Z"},{"entry_id":42,"user_id":5,"readiness":84,"bpm":65,"rmssd":45,"sns":"0.89","pns":"0.23","sleep_hours":8,"phy_age":27,"mood":"Relaxed","notes":"Spend too much time on homework.","created_at":"2025-03-26T18:38:25.000Z"},{"entry_id":43,"user_id":5,"readiness":84,"bpm":65,"rmssd":45,"sns":"0.89","pns":"0.23","sleep_hours":8,"phy_age":27,"mood":"Relaxed","notes":"Spend too much time on homework.","created_at":"2025-03-26T18:40:07.000Z"},{"entry_id":44,"user_id":5,"readiness":84,"bpm":65,"rmssd":45,"sns":"0.89","pns":"0.23","sleep_hours":8,"phy_age":27,"mood":"Relaxed","notes":"Spend too much time on homework.","created_at":"2025-03-26T18:41:22.000Z"},{"entry_id":45,"user_id":5,"readiness":25,"bpm":98,"rmssd":65,"sns":"0.01","pns":"0.02","sleep_hours":12,"phy_age":78,"mood":"Stressed","notes":"Please work.","created_at":"2025-03-31T12:25:34.000Z"},{"entry_id":46,"user_id":5,"readiness":25,"bpm":98,"rmssd":65,"sns":"0.01","pns":"0.02","sleep_hours":12,"phy_age":78,"mood":"Stressed","notes":"Assignment9meniläpi.","created_at":"2025-03-31T12:27:20.000Z"},{"entry_id":47,"user_id":5,"readiness":25,"bpm":98,"rmssd":65,"sns":"0.01","pns":"0.02","sleep_hours":12,"phy_age":78,"mood":"Stressed","notes":"Assignment9meniläpi.","created_at":"2025-03-31T12:31:23.000Z"},{"entry_id":48,"user_id":5,"readiness":25,"bpm":98,"rmssd":65,"sns":"0.01","pns":"0.02","sleep_hours":12,"phy_age":78,"mood":"Stressed","notes":"Assignment9meniläpi.","created_at":"2025-03-31T12:31:45.000Z"},{"entry_id":49,"user_id":5,"readiness":25,"bpm":98,"rmssd":65,"sns":"0.01","pns":"0.02","sleep_hours":12,"phy_age":78,"mood":"Stressed","notes":"Assignment9meniläpi.","created_at":"2025-03-31T12:36:50.000Z"},{"entry_id":50,"user_id":5,"readiness":25,"bpm":98,"rmssd":65,"sns":"0.01","pns":"0.02","sleep_hours":12,"phy_age":78,"mood":"Stressed","notes":"Assignment9meniläpi.","created_at":"2025-03-31T12:38:23.000Z"},{"entry_id":51,"user_id":5,"readiness":25,"bpm":98,"rmssd":65,"sns":"0.01","pns":"0.02","sleep_hours":12,"phy_age":78,"mood":"Stressed","notes":"Assignment9meniläpi.","created_at":"2025-03-31T12:38:40.000Z"},{"entry_id":52,"user_id":5,"readiness":25,"bpm":98,"rmssd":65,"sns":"0.01","pns":"0.02","sleep_hours":12,"phy_age":78,"mood":"Stressed","notes":"Assignment9meniläpi.","created_at":"2025-03-31T12:39:40.000Z"},{"entry_id":53,"user_id":5,"readiness":25,"bpm":98,"rmssd":65,"sns":"0.01","pns":"0.02","sleep_hours":12,"phy_age":78,"mood":"Stressed","notes":"Assignment9meniläpi.","created_at":"2025-03-31T12:43:13.000Z"},{"entry_id":54,"user_id":5,"readiness":25,"bpm":98,"rmssd":65,"sns":"0.01","pns":"0.02","sleep_hours":12,"phy_age":78,"mood":"Stressed","notes":"Assignment9meniläpi.","created_at":"2025-03-31T12:43:26.000Z"},{"entry_id":55,"user_id":5,"readiness":25,"bpm":98,"rmssd":65,"sns":"0.01","pns":"0.02","sleep_hours":12,"phy_age":78,"mood":"Stressed","notes":"Assignment9meniläpi.","created_at":"2025-03-31T15:01:15.000Z"},{"entry_id":56,"user_id":5,"readiness":25,"bpm":98,"rmssd":65,"sns":"0.01","pns":"0.02","sleep_hours":12,"phy_age":78,"mood":"Stressed","notes":"Assignment9meniläpi.","created_at":"2025-03-31T15:03:27.000Z"},{"entry_id":57,"user_id":5,"readiness":84,"bpm":65,"rmssd":45,"sns":"0.89","pns":"0.23","sleep_hours":8,"phy_age":27,"mood":"Relaxed","notes":"Spend too much time on homework.","created_at":"2025-03-31T15:09:34.000Z"}] 
+ </msg>
+<msg time="2025-03-31T18:11:17.091149" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>http://127.0.0.1:3000/api/entries</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.081832" elapsed="0.009357"/>
 </kw>
-<kw name="Upload File By Selector" owner="Browser">
-<arg>//input[@type='file']</arg>
-<arg>tests/tester.txt</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Uploads file from ``path`` to file input element matched by selector.</doc>
-<status status="PASS" start="2025-03-28T08:33:41.081918" elapsed="0.025748"/>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.091379" elapsed="0.000107"/>
 </kw>
-<kw name="Uncheck Checkbox" owner="Browser">
-<arg>id=my-check-1</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Unchecks the checkbox found by ``selector``.</doc>
-<status status="PASS" start="2025-03-28T08:33:41.108440" elapsed="0.034982"/>
-</kw>
-<kw name="Check Checkbox" owner="Browser">
-<arg>id=my-check-2</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Checks the checkbox or selects radio button found by ``selector``.</doc>
-<status status="PASS" start="2025-03-28T08:33:41.143932" elapsed="0.048369"/>
-</kw>
-<kw name="Check Checkbox" owner="Browser">
-<arg>id=my-radio-2</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Checks the checkbox or selects radio button found by ``selector``.</doc>
-<status status="PASS" start="2025-03-28T08:33:41.193190" elapsed="0.056003"/>
-</kw>
-<kw name="Drag And Drop Relative To" owner="Browser">
-<msg time="2025-03-28T08:33:41.262700" level="INFO">Moving mouse to x: 1020.0, y: 242.0 coordinates.</msg>
-<msg time="2025-03-28T08:33:41.294496" level="INFO">Moving mouse to x: 920.0, y: 242.0 coordinates.</msg>
-<msg time="2025-03-28T08:33:46.316997" level="INFO">No coordinates where set. Action appears at current position.</msg>
-<arg>[type="range"]</arg>
-<arg>-100</arg>
-<arg>0</arg>
-<arg>steps=300</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Executes a Drag&amp;Drop operation from the element selected by ``selector_from``
-to coordinates relative to the center of that element.</doc>
-<status status="PASS" start="2025-03-28T08:33:41.250108" elapsed="5.072004"/>
-</kw>
-<kw name="Click With Options" owner="Browser">
-<msg time="2025-03-28T08:33:46.323226" level="INFO">Clicks the element 'button'.</msg>
-<arg>button</arg>
-<arg>delay=2 s</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-28T08:33:46.322693" elapsed="2.231427"/>
-</kw>
-<kw name="Get Text" owner="Browser">
-<msg time="2025-03-28T08:33:48.589157" level="INFO">Text: 'Received!'</msg>
-<arg>id=message</arg>
-<arg>==</arg>
-<arg>Received!</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-03-28T08:33:48.555080" elapsed="0.034288"/>
-</kw>
-<msg time="2025-03-28T08:33:48.593612" level="INFO">Set timeout to: 10000</msg>
-<status status="PASS" start="2025-03-28T08:33:35.020542" elapsed="13.569568"/>
+<status status="PASS" start="2025-03-31T18:11:17.080921" elapsed="0.010809"/>
 </test>
-<status status="PASS" start="2025-03-28T08:33:34.869793" elapsed="13.724926"/>
+<test id="s1-t2" name="Get User's Profile" line="34">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-31T18:11:17.093452" level="INFO">${header} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VybmFtZSI6InByb2pla3RpZGVtbyIsImVtYWlsIjoicHJvamVrdGlAZGVtby5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDE2OjM5OjM3LjAwM...</msg>
+<var>${header}</var>
+<arg>Authorization=Bearer ${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.092853" elapsed="0.000621"/>
+</kw>
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-03-31T18:11:17.099635" level="INFO">GET Request : url=http://127.0.0.1:3000/api/users/5 
+ path_url=/api/users/5 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VybmFtZSI6InByb2pla3RpZGVtbyIsImVtYWlsIjoicHJvamVrdGlAZGVtby5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDE2OjM5OjM3LjAwMFoiLCJ1c2VyX2xldmVsIjoicmVndWxhciIsImlhdCI6MTc0MzQzMzg3NywiZXhwIjoxNzQzNTIwMjc3fQ.HN6ps7Tx3D407BjpvVCemZ7LyoQ9iD_hxCcbsko22Gs'} 
+ body=None 
+ </msg>
+<msg time="2025-03-31T18:11:17.099690" level="INFO">GET Response : url=http://127.0.0.1:3000/api/users/5 
+ status=200, reason=OK 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '207', 'ETag': 'W/"cf-bMuVDWIBOqBZK6HxYwGI5sBgS8U"', 'Date': 'Mon, 31 Mar 2025 15:11:17 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={"username":"projektidemo","email":"projekti@demo.fi","fname":"Pekka Juhana","lname":"Hautala","occupation":"Metropolia Oy, Sählääjä","weight":"81.00","height":67,"created_at":"2025-03-07T16:39:37.000Z"} 
+ </msg>
+<msg time="2025-03-31T18:11:17.099879" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>http://127.0.0.1:3000/api/users/${user_id}</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.093891" elapsed="0.006008"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.100179" elapsed="0.000096"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>username</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.100412" elapsed="0.000315"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>email</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.100962" elapsed="0.000304"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>fname</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.101492" elapsed="0.000305"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>lname</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.102064" elapsed="0.000295"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>occupation</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.102598" elapsed="0.000345"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>weight</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.103071" elapsed="0.000269"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>height</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.103638" elapsed="0.000307"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>created_at</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.104210" elapsed="0.000283"/>
+</kw>
+<status status="PASS" start="2025-03-31T18:11:17.092415" elapsed="0.012190"/>
+</test>
+<test id="s1-t3" name="Post A New Measurement result" line="49">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-31T18:11:17.105352" level="INFO">${header} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VybmFtZSI6InByb2pla3RpZGVtbyIsImVtYWlsIjoicHJvamVrdGlAZGVtby5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDE2OjM5OjM3LjAwM...</msg>
+<var>${header}</var>
+<arg>Authorization=Bearer ${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.105198" elapsed="0.000174"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-31T18:11:17.105781" level="INFO">${body} = {'readiness': '25', 'bpm': '98', 'rmssd': '65', 'sns': '0.01', 'pns': '0.02', 'sleep_hours': '12', 'phy_age': '78', 'mood': 'Stressed', 'notes': 'Assignment9meniläpi.'}</msg>
+<var>${body}</var>
+<arg>readiness=25</arg>
+<arg>bpm=98</arg>
+<arg>rmssd=65</arg>
+<arg>sns=0.01</arg>
+<arg>pns=0.02</arg>
+<arg>sleep_hours=12</arg>
+<arg>phy_age=78</arg>
+<arg>mood=Stressed</arg>
+<arg>notes=Assignment9meniläpi.</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.105614" elapsed="0.000186"/>
+</kw>
+<kw name="POST" owner="RequestsLibrary">
+<msg time="2025-03-31T18:11:17.117912" level="INFO">POST Request : url=http://127.0.0.1:3000/api/entries 
+ path_url=/api/entries 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VybmFtZSI6InByb2pla3RpZGVtbyIsImVtYWlsIjoicHJvamVrdGlAZGVtby5maSIsImNyZWF0ZWRfYXQiOiIyMDI1LTAzLTA3VDE2OjM5OjM3LjAwMFoiLCJ1c2VyX2xldmVsIjoicmVndWxhciIsImlhdCI6MTc0MzQzMzg3NywiZXhwIjoxNzQzNTIwMjc3fQ.HN6ps7Tx3D407BjpvVCemZ7LyoQ9iD_hxCcbsko22Gs', 'Content-Length': '173', 'Content-Type': 'application/json'} 
+ body=b'{"readiness": "25", "bpm": "98", "rmssd": "65", "sns": "0.01", "pns": "0.02", "sleep_hours": "12", "phy_age": "78", "mood": "Stressed", "notes": "Assignment9menil\\u00e4pi."}' 
+ </msg>
+<msg time="2025-03-31T18:11:17.117998" level="INFO">POST Response : url=http://127.0.0.1:3000/api/entries 
+ status=201, reason=Created 
+ headers={'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '26', 'ETag': 'W/"1a-XDNFNFrqeHHuclsYQ3uTbTzfT2A"', 'Date': 'Mon, 31 Mar 2025 15:11:17 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body={"message":"Entry added."} 
+ </msg>
+<msg time="2025-03-31T18:11:17.118092" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>http://127.0.0.1:3000/api/entries</arg>
+<arg>headers=${header}</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.105931" elapsed="0.012180"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>201</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.118752" elapsed="0.000144"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${response.json()}[message]</arg>
+<arg>Entry added.</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-03-31T18:11:17.119186" elapsed="0.000594"/>
+</kw>
+<status status="PASS" start="2025-03-31T18:11:17.104966" elapsed="0.015065"/>
+</test>
+<status status="PASS" start="2025-03-31T18:11:16.587514" elapsed="0.533068"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Assignment 3" id="s1" pass="1" fail="0" skip="0">Assignment 3</stat>
+<stat name="Assignment 9" id="s1" pass="3" fail="0" skip="0">Assignment 9</stat>
 </suite>
 </statistics>
 <errors>

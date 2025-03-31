@@ -168,3 +168,65 @@ Kuva 14. Koodi uuden päiväkirjamerkinnän syötön testaamiseen ja suorituksen
 `robot --outputdir outputs tests/assignment_4.robot`- komennolla testi käynnistettiin ja tulostukset ohjattiin outputs-kansioon.
 
 Huom! Muuttujat sisältävää tiedostoa ei syötetty tietoturvasyistä Githubiin.
+
+## 5. Tehtävä 5, kirjautumistesti omalle terveyspäiväkirja-sovellukselle käyttäen .env- tiedostoa.
+
+Tehtävänanto: "Tee kirjautumistesti omalle sovelluksellesi, joka käyttää ’.env’-tiedostoon piilotettuja 
+käyttäjätunnusta ja salasanaa."
+
+Ensin asennettiin pythonin dotenv-kirjasto, jotta .env- tiedostoja voidaan lukea ja soveltaa. Tämä tehtiin komennolla `pip install python-dotenv` (Kuva 15), kun virtuaaliympästö oli laitettu päälle.
+
+![image](images/python-dotenv-installed.png)
+Kuva 15. Komento python-dotenv-kirjaston asennuksesta, sekä suoriutumisen onnistuminen.
+
+Opettajien tukimateriaalia hyödyntäen, .env- tiedostoon syötettiin käyttäjänimi ja salasana. Seuraavaksi luotiin python kirjasto, jossa määriteltiin testiä varten muuttujat Robot Frameworkille.
+
+Tätä kirjastoa hyödyntäen suoritettiin uusi kirjautumistesti (Kuva 16).
+
+![image](images/teht_5.png)
+Kuva 16. Koodi sisäänkirjautumisen suorittamisesta, sekä suoriutumisen onnistuminen.
+
+`robot --outputdir outputs tests/assignment_5.robot`- komennolla testi käynnistettiin ja tulostukset ohjattiin outputs-kansioon.
+
+Huom! Muuttujat sisältävää tiedostoa ei syötetty tietoturvasyistä Githubiin. __pycache__- repositio myös jätetty pois.
+
+## 6. Tehtävä 6, kirjautumistesti omalle terveyspäiväkirja-sovellukselle käyttäen CryptoLibrary (Kuva 17).
+
+Ensin käynnistettiin CryptoLibraryn käyttö komennolla `python -m CryptoLibrary`.
+
+Valikosta valittiin nuolinäppäimillä `Open config` -> `Configure key pair` -> `Generate key pair`, jolla saatiin kaksi avainta ja salasana.
+
+Tietojen salausta varten suoritettiin komento `python -m CryptoClient`. Valikosta valittiin nuolinäppäimillä `Encrypt` -> `Enter the password to encrypt`, johon kirjoitettiin salatut tiedot yksi kerrallaan. Tulostetut tiedot kopioitiin koodiin.
+
+![image](images/teht_6.png)
+Kuva 17. Koodi sisäänkirjautumisen suorittamisesta, sekä suoriutumisen onnistuminen.
+
+`robot --outputdir outputs tests/assignment_6.robot`- komennolla testi käynnistettiin ja tulostukset ohjattiin outputs-kansioon.
+
+## 7. Tehtävä 7, tulostus outputs kansioon.
+
+Tehtävänanto: "Ohjaa testien loki- ja raporttitiedostot erilliseen outputs/-kansioon."
+
+Kaikissa tehtävissä testien loki- ja raporttitiedostot on tulostettu erilliseen outputs/-kansioon komennolla `robot --outputdir outputs tests/<tehtävänkansio>.robot`
+
+Esimerkkejä näkyy tehtävien 2-6 ja 9 kuvissa.
+
+## 8. Tehtävä 8, github.io-sivusto.
+
+Kesken.
+
+## 9. Tehtävä 9, taustapalvelimen testaus (Kuva X).
+
+Tehtävänanto: "Tee testit, joilla testaat oman taustapalvelimen toimintaa."
+
+Taustapalvelinta käsketty suorittamaan 3 testiä:
+- Tulostaa (sisäänkirjautuneen) käyttäjän HRV mittaukset
+- Tulostaa (sisäänkirjautuneen) käyttäjän profiilitiedot
+- Luoda (sisäänkirjautuneelle) käyttäjälle uusi HRV mittaustulos
+
+Sisäänkirjautuminen on edellytys ohessa listatuille toiminnoille. Tätä varten testin alussa tehdään "regular"- käyttäjän sisäänkirjautuminen, jossa saadaan tarvittava token, joka lisätään ohessa esitettyihin API- pyyntöihin (headers).
+
+![image](images/teht_9.png)
+Kuva X. Koodi taustapalvelimen testauksen suorittamisesta, sekä suoriutumisen onnistuminen.
+
+`robot --outputdir outputs tests/assignment_9.robot`- komennolla testi käynnistettiin ja tulostukset ohjattiin outputs-kansioon.

@@ -1,5 +1,11 @@
 .venv
+.env
 tests/login.robot
 tests/Keywords.robot
+tests/dotenv-demo.robot
+tests/load_env.py
+#tests/login_env.py
 tests/entry.robot
 browser_demo.robot
+tests/__pycache__
+browser

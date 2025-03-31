@@ -1,0 +1,86 @@
+{"level":30,"time":"2025-03-31T15:09:18.859Z","pid":6104,"hostname":"Asus","msg":"Listening on 53426"}
+(node:6104) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-03-31T15:09:18.962Z","pid":6104,"hostname":"Asus","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-31T15:09:19.121Z","pid":6104,"hostname":"Asus","msg":"Adding browser to stack: chromium, version: 134.0.6998.35"}
+{"level":30,"time":"2025-03-31T15:09:19.121Z","pid":6104,"hostname":"Asus","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-31T15:09:19.121Z","pid":6104,"hostname":"Asus","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-31T15:09:19.137Z","pid":6104,"hostname":"Asus","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-31T15:09:19.138Z","pid":6104,"hostname":"Asus","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-31T15:09:19.149Z","pid":6104,"hostname":"Asus","msg":"Changed active context"}
+{"level":30,"time":"2025-03-31T15:09:19.311Z","pid":6104,"hostname":"Asus","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-31T15:09:19.311Z","pid":6104,"hostname":"Asus","msg":"Changed active page"}
+{"level":30,"time":"2025-03-31T15:09:19.391Z","pid":6104,"hostname":"Asus","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-31T15:09:19.410Z","pid":6104,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:19.410Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with [name=\"username\"] in page."}
+{"level":30,"time":"2025-03-31T15:09:20.858Z","pid":6104,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:20.864Z","pid":6104,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:20.864Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with [name=\"password\"] in page."}
+{"level":30,"time":"2025-03-31T15:09:22.253Z","pid":6104,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:22.256Z","pid":6104,"hostname":"Asus","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-31T15:09:22.256Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with input.loginform in page."}
+{"level":30,"time":"2025-03-31T15:09:24.298Z","pid":6104,"hostname":"Asus","msg":"End of node method click"}
+================= Original suppressed error =================
+page.title: Execution context was destroyed, most likely because of a navigation
+    at getTitle (C:\Users\Omistaja\Documents\hyte\sovellustesti\.venv\Lib\site-packages\Browser\wrapper\index.js:11518:28)
+    at PlaywrightServer.getTitle (C:\Users\Omistaja\Documents\hyte\sovellustesti\.venv\Lib\site-packages\Browser\wrapper\index.js:13375:30)
+    at Object.onReceiveHalfClose (C:\Users\Omistaja\Documents\hyte\sovellustesti\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\Omistaja\Documents\hyte\sovellustesti\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\Omistaja\Documents\hyte\sovellustesti\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\Omistaja\Documents\hyte\sovellustesti\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18) {
+  name: 'Error'
+}
+=============================================================
+{"level":30,"time":"2025-03-31T15:09:24.779Z","pid":6104,"hostname":"Asus","msg":"Start of node method getElement"}
+{"level":30,"time":"2025-03-31T15:09:24.780Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with xpath=(//a[@href='hrv-mittaukset.html' and text()='HRV mittaukset'])[1] in page."}
+{"level":30,"time":"2025-03-31T15:09:24.797Z","pid":6104,"hostname":"Asus","msg":"End of node method getElement"}
+{"level":30,"time":"2025-03-31T15:09:24.805Z","pid":6104,"hostname":"Asus","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-31T15:09:24.805Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with xpath=(//a[@href='hrv-mittaukset.html' and text()='HRV mittaukset'])[1] in page."}
+{"level":30,"time":"2025-03-31T15:09:25.892Z","pid":6104,"hostname":"Asus","msg":"End of node method click"}
+{"level":30,"time":"2025-03-31T15:09:25.915Z","pid":6104,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:25.916Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with id=readiness-id in page."}
+{"level":30,"time":"2025-03-31T15:09:26.167Z","pid":6104,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:26.172Z","pid":6104,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:26.172Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with id=bpm-id in page."}
+{"level":30,"time":"2025-03-31T15:09:26.434Z","pid":6104,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:26.437Z","pid":6104,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:26.437Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with id=rmssd-id in page."}
+{"level":30,"time":"2025-03-31T15:09:26.674Z","pid":6104,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:26.677Z","pid":6104,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:26.677Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with id=sns-id in page."}
+{"level":30,"time":"2025-03-31T15:09:27.158Z","pid":6104,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:27.161Z","pid":6104,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:27.161Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with id=pns-id in page."}
+{"level":30,"time":"2025-03-31T15:09:27.621Z","pid":6104,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:27.624Z","pid":6104,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:27.624Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with id=sleep-id in page."}
+{"level":30,"time":"2025-03-31T15:09:27.752Z","pid":6104,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:27.758Z","pid":6104,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:27.758Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with id=phy-age-id in page."}
+{"level":30,"time":"2025-03-31T15:09:28.012Z","pid":6104,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:28.019Z","pid":6104,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:28.019Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with id=mood-id in page."}
+{"level":30,"time":"2025-03-31T15:09:28.835Z","pid":6104,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:28.841Z","pid":6104,"hostname":"Asus","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:28.841Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with id=notes-id in page."}
+{"level":30,"time":"2025-03-31T15:09:32.719Z","pid":6104,"hostname":"Asus","msg":"End of node method typeText"}
+{"level":30,"time":"2025-03-31T15:09:32.733Z","pid":6104,"hostname":"Asus","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-31T15:09:32.733Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with //input[@class='create-m'] in page."}
+{"level":30,"time":"2025-03-31T15:09:34.784Z","pid":6104,"hostname":"Asus","msg":"End of node method click"}
+{"level":30,"time":"2025-03-31T15:09:34.787Z","pid":6104,"hostname":"Asus","msg":"Reload page with options: {\"waitUntil\": \"load\"}"}
+{"level":30,"time":"2025-03-31T15:09:34.854Z","pid":6104,"hostname":"Asus","msg":"Start of node method getElement"}
+{"level":30,"time":"2025-03-31T15:09:34.855Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with xpath=//button[@class='check' and text()='MITTAUS 1'] in page."}
+{"level":30,"time":"2025-03-31T15:09:34.878Z","pid":6104,"hostname":"Asus","msg":"End of node method getElement"}
+{"level":30,"time":"2025-03-31T15:09:34.884Z","pid":6104,"hostname":"Asus","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-31T15:09:34.884Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with xpath=//button[@class='check' and text()='MITTAUS 1'] in page."}
+{"level":30,"time":"2025-03-31T15:09:36.273Z","pid":6104,"hostname":"Asus","msg":"End of node method click"}
+{"level":30,"time":"2025-03-31T15:09:36.277Z","pid":6104,"hostname":"Asus","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-31T15:09:36.277Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with xpath=//button[@class='close-result' and text()='Sulje'] in page."}
+{"level":30,"time":"2025-03-31T15:09:38.350Z","pid":6104,"hostname":"Asus","msg":"End of node method click"}
+{"level":30,"time":"2025-03-31T15:09:38.361Z","pid":6104,"hostname":"Asus","msg":"Start of node method getElement"}
+{"level":30,"time":"2025-03-31T15:09:38.361Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with xpath=(//a[@id='exit-program' and text()='Kirjaudu ulos'])[1] in page."}
+{"level":30,"time":"2025-03-31T15:09:38.364Z","pid":6104,"hostname":"Asus","msg":"End of node method getElement"}
+{"level":30,"time":"2025-03-31T15:09:38.367Z","pid":6104,"hostname":"Asus","msg":"Start of node method click"}
+{"level":30,"time":"2025-03-31T15:09:38.367Z","pid":6104,"hostname":"Asus","msg":"Strict mode is enabled, find Locator with xpath=(//a[@id='exit-program' and text()='Kirjaudu ulos'])[1] in page."}
+{"level":30,"time":"2025-03-31T15:09:39.421Z","pid":6104,"hostname":"Asus","msg":"End of node method click"}
+{"level":30,"time":"2025-03-31T15:09:41.422Z","pid":6104,"hostname":"Asus","msg":"Removed page=1431d7f6-c033-492a-a75a-eea5cd3ce92a from context=65bdaa69-af01-4a26-b958-f8b02ac91ba2 page stack"}
