@@ -213,9 +213,17 @@ Esimerkkejä näkyy tehtävien 2-6 ja 9 kuvissa.
 
 ## 8. Tehtävä 8, github.io-sivusto.
 
-Kesken.
+Luotu ensin Github- sivu, nimeltää Nappulat.github.io. Omaa projektia muokattu siten, että jokaiseen kansioon tehty readme.md- tiedostot, jossa linkit kansioiden tiedostoihin.
 
-## 9. Tehtävä 9, taustapalvelimen testaus (Kuva X).
+HUOM! Nämä muokkaukset on tehty alkuperäiseen projektirepoon (tämä kyseinen repositio on vain kopio), koska alihakemistot aiheuttivat ongelmia tällä projektilla. Testit ajettiin virallisessa projektissa uudestaan.
+
+[Linkki viralliseen projektirepoon](https://github.com/Nappulat/fe-projekti)
+
+Virallisessa repositiossa siirryttiin asetuksiin --> Pages ja julkaistiin main- branch.
+
+[Linkki raportteihin ja lokeihin](https://nappulat.github.io/fe-projekti/)
+
+## 9. Tehtävä 9, taustapalvelimen testaus (Kesken).
 
 Tehtävänanto: "Tee testit, joilla testaat oman taustapalvelimen toimintaa."
 
