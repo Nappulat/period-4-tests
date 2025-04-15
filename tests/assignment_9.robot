@@ -1,7 +1,7 @@
 *** Settings ***                                                                                       
 Library    Collections                                                                                 
 Library    RequestsLibrary
-Resource    login.robot                                                                          
+Variables    login_env.py                                                                          
                                                                                                        
 Suite Setup    Authenticate as Regular
                                                                                                        
@@ -10,7 +10,7 @@ Suite Setup    Authenticate as Regular
 *** Keywords ***
 Authenticate as Regular
 
-    ${body}    Create Dictionary    username=${Username}    password=${Password}
+    ${body}    Create Dictionary    username=${MY_USERNAME}    password=$MY_PASSWORD
     ${response}    POST    url=http://127.0.0.1:3000/api/auth/login    json=${body}
     #Log To Console   ${response.json()}
 

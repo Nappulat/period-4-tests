@@ -223,18 +223,19 @@ Virallisessa repositiossa siirryttiin asetuksiin --> Pages ja julkaistiin main- 
 
 [Linkki raportteihin ja lokeihin](https://nappulat.github.io/fe-projekti/)
 
-## 9. Tehtävä 9, taustapalvelimen testaus (Kesken).
+## 9. Tehtävä 9, taustapalvelimen testaus (Päivitetty) (kuva 18).
 
 Tehtävänanto: "Tee testit, joilla testaat oman taustapalvelimen toimintaa."
 
-Taustapalvelinta käsketty suorittamaan 3 testiä:
-- Tulostaa (sisäänkirjautuneen) käyttäjän HRV mittaukset
-- Tulostaa (sisäänkirjautuneen) käyttäjän profiilitiedot
-- Luoda (sisäänkirjautuneelle) käyttäjälle uusi HRV mittaustulos
+Taustapalvelinta käsketty suorittamaan 2 testiä:
+- Luo uusi (dummy) käyttäjä sovellukseen
+- Kirjaudu tunnuksilla sisään
 
-Sisäänkirjautuminen on edellytys ohessa listatuille toiminnoille. Tätä varten testin alussa tehdään "regular"- käyttäjän sisäänkirjautuminen, jossa saadaan tarvittava token, joka lisätään ohessa esitettyihin API- pyyntöihin (headers).
+![image](images/teht_9_uusi.png)
+Kuva 18. Koodi taustapalvelimen testauksen suorittamisesta, sekä suoriutumisen onnistuminen.
 
-![image](images/teht_9.png)
-Kuva X. Koodi taustapalvelimen testauksen suorittamisesta, sekä suoriutumisen onnistuminen.
+`robot --outputdir outputs tests/assignment_9_new.robot`- komennolla testi käynnistettiin ja tulostukset ohjattiin outputs-kansioon.
 
-`robot --outputdir outputs tests/assignment_9.robot`- komennolla testi käynnistettiin ja tulostukset ohjattiin outputs-kansioon.
+## Github.io yhteenveto kaikista ohjelmistotesteistä
+
+`robot --outputdir outputs tests/assignment_2.robot tests/assignment_3.robot tests/assignment_4.robot tests/assignment_5.robot tests/assignment_6.robot tests/assignment_9_new.robot`- komennolla ajettiin kaikki testit uudestaan, jotta ne saatiin github.io sivulle ---> [Linkki raportteihin ja lokeihin](https://nappulat.github.io/fe-projekti/)
