@@ -239,3 +239,5 @@ Kuva 18. Koodi taustapalvelimen testauksen suorittamisesta, sekä suoriutumisen 
 ## Github.io yhteenveto kaikista ohjelmistotesteistä
 
 `robot --outputdir outputs tests/assignment_2.robot tests/assignment_3.robot tests/assignment_4.robot tests/assignment_5.robot tests/assignment_6.robot tests/assignment_9_new.robot`- komennolla ajettiin kaikki testit uudestaan, jotta ne saatiin github.io sivulle ---> [Linkki raportteihin ja lokeihin](https://nappulat.github.io/fe-projekti/)
+
+[Linkki projektirepon README.md](https://github.com/Nappulat/fe-projekti/blob/main/README.md)
